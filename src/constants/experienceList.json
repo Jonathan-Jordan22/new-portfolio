@@ -1,22 +1,26 @@
 [
   {
     "company": "Skinstric AI",
-    "role": "Frontend Engineer",
+    "role": "Fullstack Engineer",
     "resps": [
-      "Built a real-time AI skin analysis application using React, JavaScript, and RESTful APIs, achieving 95%+ accuracy in demographic and skin feature detection from images and live camera inpu",
-      "Developed a fully responsive UI with custom CSS3 animations, improving mobile engagement by 30% and reducing bounce rate",
-      "Integrated browser APIs for seamless live camera capture and image processing, cutting upload-to-analysis time by 40%"
+      "Delivered a real-time AI skin analysis app in React, integrating browser camera APIs and REST services to process images and live video with 95%+ accuracy.",
+      "Built a fully responsive UI with custom CSS3 animations, boosting mobile engagement by 30% and reducing bounce rate.",
+      " Optimized API communication with Axios, cutting upload-to-analysis time by 40% and enabling sub-second feedback.",
+      "Implemented robust routing and state management with React Router and Hooks, reducing navigation-related bugs by 25%.",
+      "Designed a modular component system, reducing code duplication by 40% and accelerating feature iteration cycles.",
+      "Deployed on Vercel to ensure 99.9% uptime and scalable access for 1,000+ test users across devices."
     ],
     "date": "July 2025 - Current"
   },
   {
     "company": "Frontend Simplified",
-    "role": "Frontend Engineer",
+    "role": "Fullstack Engineer",
     "resps": [
-      "Built a responsive web application from scratch with React, implementing dynamic routing that supported 100+ distinct item pages",
-      "Engineered asynchronous data fetching from a REST API, decreasing API call errors by 20% through improved state/side-effect handling",
-      "Enhanced UX by designing skeleton loaders, reducing perceived load time by 60% during data fetches",
-      "Integrated react-owl-carousel, “load more” pagination, and AOS animations, increasing average session duration by 15%"
+      "Built a responsive React application from scratch; implemented dynamic routing supporting 100+ distinct item pages.",
+      "Engineered robust asynchronous data fetching from a REST API, decreasing API call errors by 20% through improved state/side-effect handling.",
+      "Integrated react-owl-carousel, 'load more' pagination, and AOS animations, increasing average session duration by 15%.",
+      "Created a reusable component library, cutting development time for new features by 35%.",
+      "Enforced modular design patterns, reducing developer on-boarding time by 50%."
     ],
     "date": "Jul 2020 - current"
   }

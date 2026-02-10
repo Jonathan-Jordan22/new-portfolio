@@ -29,9 +29,17 @@ export default function Projects() {
 
   const works = [
     {
+      client: "RelocateReady",
+      year: "2026",
+      img: work1,
+      title: "Turning Relocation Decisions into Data-Driven Rankings",
+      detail:
+      "Developed RelocateReady, a multi-user full-stack web application that helps users identify and rank global relocation destinations based on personalized preferences. Built a FastAPI backend with RESTful endpoints, relational data models, and weighted scoring algorithms, and a responsive Next.js frontend with Tailwind CSS. Implemented user authentication flows, saved-location tracking, and real-time ranking updates. Deployed the platform using Railway (backend) and Vercel (frontend), enabling production-ready scalability."
+    },
+    {
       client: "Skinstric Internship",
       year: "2025",
-      img: work1,
+      img: work2,
       title: "Building Interactive A.I. Skin Analysis Platform",
       detail:
         'Developed "Skinstric," a responsive React web app for A.I. skin analysis. Engineered an immersive UI with features like live camera capture (getUserMedia), file uploads, and interactive data visualizations. Focused on smooth animations, state management, and seamless API integration with Axios.',
@@ -39,18 +47,10 @@ export default function Projects() {
     {
       client: "Ultraverse Internship",
       year: "2025",
-      img: work2,
+      img: work3,
       title: "Next generation NFT Marketplace.",
       detail:
         "A modern NFT marketplace frontend built with React, featuring dynamic routing, API integration, responsive design, animated UI elements, and custom skeleton loaders. Users can browse, explore, and view detailed NFT collections and profiles in a seamless, engaging multi-page application experience.",
-    },
-    {
-      client: "Movie Api Project",
-      year: "2025",
-      img: work3,
-      title: "Find Your Next Watch!",
-      detail:
-        "This dynamic, single-page application, built with React, showcases my proficiency in modern front-end development. It leverages the OMDb API for real-time movie data, with asynchronous requests managed by Axios. I implemented dynamic routing using React Router to create a seamless user flow between the home, search results, and detailed movie pages. State management is handled efficiently with React Hooks (useState, useEffect) to control search queries, API responses, loading indicators, and client-side sorting functionality. This project highlights my ability to build responsive, component-based UIs and integrate third-party APIs into a React application.",
     },
   ];
 

@@ -126,12 +126,11 @@ export default function Header() {
           </h3>
           <p className="theme--detail">
             <ScrambleText shuffle delay={4}>
-              Hey, I’m Jonathan! 🚀 I love building sleek, modern web apps that
-              feel effortless to use. Whether it’s designing smooth user
-              experiences, solving tricky frontend challenges, or experimenting
-              with new tools, I’m always pushing myself to learn and create
-              better. My goal? To craft technology that makes people’s lives
-              simpler, smarter, and more enjoyable.
+              Hey, I’m Jonathan! 🚀 I build full-stack applications that turn
+              ambiguous, real-world problems into clear, data-driven user
+              experiences. I enjoy designing APIs, modeling data, and pairing
+              them with clean, intuitive interfaces that make complex decisions
+              easier for users.
             </ScrambleText>
           </p>
         </div>
@@ -186,7 +185,7 @@ export default function Header() {
         <TextWriting
           controls={controls}
           delay={1.65}
-          text={"Frontend"}
+          text={"Fullstack"}
           noblink
         />{" "}
         <motion.div
@@ -198,7 +197,7 @@ export default function Header() {
           <TextWriting
             controls={controls}
             delay={2.85}
-            text={"Developer"}
+            text={"Engineer"}
             noblink
           />
           <div className="header--name--border">

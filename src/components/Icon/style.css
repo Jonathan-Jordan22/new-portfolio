@@ -34,6 +34,10 @@
   height: 32px;
 }
 
+.Icon__greyscale .Icon--icon {
+  filter: grayscale(100%);
+}
+
 .Icon--border {
   display: block;
   width: 4px;

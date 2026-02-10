@@ -1,27 +1,27 @@
-import { useState, useEffect } from "react"
-import "./style.css"
-import BackgroundLines from "../BackgroundLines"
-import ScrambleText from "../ScrambleText"
-import InteractiveMarquee from "../InteractiveMarquee"
-import ParaWriting from "../ParaWriting"
-import { motion, useAnimation } from "framer-motion"
-import { useInView } from "react-intersection-observer"
+import { useState, useEffect } from "react";
+import "./style.css";
+import BackgroundLines from "../BackgroundLines";
+import ScrambleText from "../ScrambleText";
+import InteractiveMarquee from "../InteractiveMarquee";
+import ParaWriting from "../ParaWriting";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function About() {
-  const controls = useAnimation()
-  const [ref, inView] = useInView()
-  const [hasAnimated, setHasAnimated] = useState(false)
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   const handleComplete = () => {
-    setHasAnimated(true)
-  }
+    setHasAnimated(true);
+  };
 
   useEffect(() => {
     // Start animation when the component is in view
     if (inView && !hasAnimated) {
-      controls.start("visible")
+      controls.start("visible");
     }
-  }, [inView, controls])
+  }, [inView, controls]);
 
   const positionVariant = {
     hidden: { x: "100%" },
@@ -33,12 +33,12 @@ export default function About() {
         delay: 0,
       },
     },
-  }
+  };
 
   const opacityVariant = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
-  }
+  };
 
   return (
     <section className="about" id="about">
@@ -46,11 +46,21 @@ export default function About() {
       <div ref={ref} className="about--grid">
         <div className="about--bio">
           <h2>
-            <ParaWriting stagger={0.08} text={"I'm a highly motivated frontend engineer with a strong "} sec={"passion for website development"} />
+            <ParaWriting
+              stagger={0.08}
+              text={"I'm a highly motivated fullstack engineer with a strong "}
+              sec={"passion for coding and problem-solving."}
+            />
           </h2>
         </div>
 
-        <motion.div initial="hidden" animate={controls} variants={opacityVariant} transition={{ duration: 1, delay: 1.5 }} className="about--title">
+        <motion.div
+          initial="hidden"
+          animate={controls}
+          variants={opacityVariant}
+          transition={{ duration: 1, delay: 1.5 }}
+          className="about--title"
+        >
           <h3 className="theme--text--dark">
             <ScrambleText shuffle delay={1.5}>
               02
@@ -62,13 +72,37 @@ export default function About() {
           </h3>
         </motion.div>
 
-        <motion.div initial="hidden" animate={controls} variants={opacityVariant} transition={{ duration: 1, delay: 2 }} onAnimationComplete={() => handleComplete()} className="about--detail">
+        <motion.div
+          initial="hidden"
+          animate={controls}
+          variants={opacityVariant}
+          transition={{ duration: 1, delay: 2 }}
+          onAnimationComplete={() => handleComplete()}
+          className="about--detail"
+        >
           <p className="theme--detail--dark">
-            <ScrambleText delay={2}>I am a Frontend Developer with hands-on experience building responsive, scalable, and user-focused applications. I’ve contributed to real-world projects such as an AI-powered skin analysis platform and a finance tracking dashboard, leveraging technologies like React, TypeScript, and Firebase to deliver reliable, high-performance solutions. I thrive on solving complex problems, crafting clean and maintainable code, and designing seamless user experiences. Currently pursuing a Bachelor’s Degree in Secure Software Development, I am continuously sharpening my skills to build impactful software that makes technology more accessible, engaging, and efficient.</ScrambleText>
+            <ScrambleText delay={2}>
+              I’m a full-stack developer experienced in building responsive,
+              user-focused applications across the frontend and backend. I’ve
+              contributed to projects such as an AI-powered skin analysis
+              platform and a finance tracking dashboard, working with
+              technologies including React, TypeScript, Python, FastAPI, and
+              Firebase to deliver scalable, data-driven solutions. I enjoy
+              solving complex problems, designing clean system architectures,
+              and turning ideas into reliable, end-to-end software. I’m
+              currently pursuing a Bachelor’s Degree in Secure Software
+              Development and continue to expand my expertise in secure,
+              production-ready application development.
+            </ScrambleText>
           </p>
         </motion.div>
 
-        <motion.div initial="hidden" animate={controls} variants={positionVariant} className="about--marquee">
+        <motion.div
+          initial="hidden"
+          animate={controls}
+          variants={positionVariant}
+          className="about--marquee"
+        >
           <h1 draggable="false">
             <InteractiveMarquee wheelFactor={0} speed={1.3}>
               <span>ABOUT Jonathan Jordan</span>
@@ -81,5 +115,5 @@ export default function About() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
