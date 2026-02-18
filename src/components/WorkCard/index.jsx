@@ -81,9 +81,16 @@ export default function WorkCard({ item }) {
           <img src={item.img} alt="" />
         </motion.span>
         <h1>
-          <HideText controls={controls} delay={delay}>
-            {item.title}
-          </HideText>
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <HideText controls={controls} delay={delay}>
+              {item.title}
+            </HideText>
+          </a>
         </h1>
         <p>
           <FadeText controls={controls} delay={delay}>

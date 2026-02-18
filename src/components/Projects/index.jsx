@@ -34,7 +34,8 @@ export default function Projects() {
       img: work1,
       title: "Turning Relocation Decisions into Data-Driven Rankings",
       detail:
-      "Developed RelocateReady, a multi-user full-stack web application that helps users identify and rank global relocation destinations based on personalized preferences. Built a FastAPI backend with RESTful endpoints, relational data models, and weighted scoring algorithms, and a responsive Next.js frontend with Tailwind CSS. Implemented user authentication flows, saved-location tracking, and real-time ranking updates. Deployed the platform using Railway (backend) and Vercel (frontend), enabling production-ready scalability."
+        "Developed RelocateReady, a multi-user full-stack web application that helps users identify and rank global relocation destinations based on personalized preferences. Built a FastAPI backend with RESTful endpoints, relational data models, and weighted scoring algorithms, and a responsive Next.js frontend with Tailwind CSS. Implemented user authentication flows, saved-location tracking, and real-time ranking updates. Deployed the platform using Railway (backend) and Vercel (frontend), enabling production-ready scalability.",
+      url: "https://relocate-ready.vercel.app/",
     },
     {
       client: "Skinstric Internship",
@@ -43,6 +44,7 @@ export default function Projects() {
       title: "Building Interactive A.I. Skin Analysis Platform",
       detail:
         'Developed "Skinstric," a responsive React web app for A.I. skin analysis. Engineered an immersive UI with features like live camera capture (getUserMedia), file uploads, and interactive data visualizations. Focused on smooth animations, state management, and seamless API integration with Axios.',
+      url: "https://skinstric-iota.vercel.app/",
     },
     {
       client: "Ultraverse Internship",
@@ -51,6 +53,7 @@ export default function Projects() {
       title: "Next generation NFT Marketplace.",
       detail:
         "A modern NFT marketplace frontend built with React, featuring dynamic routing, API integration, responsive design, animated UI elements, and custom skeleton loaders. Users can browse, explore, and view detailed NFT collections and profiles in a seamless, engaging multi-page application experience.",
+      url: "https://jonathan-internship-ruby.vercel.app/",
     },
   ];
 
