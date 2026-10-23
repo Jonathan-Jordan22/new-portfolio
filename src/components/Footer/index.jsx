@@ -134,8 +134,6 @@ export default function Footer() {
     try {
       const { serviceId, templateid, publicKey } = emailjsconfig;
 
-      console.log("trigger");
-
       const templateParams = {
         "user-name": fieldValues.name,
         user_email: fieldValues.email,
@@ -261,7 +259,7 @@ export default function Footer() {
         className="footer--bottom"
         onAnimationComplete={() => handleComplete()}
       >
-        <p>Copyright © {new Date().getFullYear()} Zen Farhat</p>
+        <p>Copyright © {new Date().getFullYear()} Jonathan Jordan</p>
         <p>
           <Time delay={3} />
         </p>

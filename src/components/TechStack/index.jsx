@@ -54,7 +54,7 @@ export default function TechStack() {
 
         <motion.div initial="hidden" animate={controls} variants={opacityVariant} transition={{ duration: 1, delay: 1 }} onAnimationComplete={() => handleComplete()} className="techStackSec--head--detail">
           <p className="theme--detail">
-            <ScrambleText delay={1}>Explore the technologies that shape my work: HTML5, CSS3, JavaScript, TypeScript, React, FastAPI, and PostgreSQL. I use each to craft full-stack applications that balance robust backend functionality with smooth, responsive user experiences.</ScrambleText>
+            <ScrambleText delay={1}>My core stack is Python, FastAPI, and PostgreSQL on the backend, with TypeScript and React on the frontend when a project needs a full interface. At work I also write C++ and SQL against Actian Zen/PSQL.</ScrambleText>
           </p>
         </motion.div>
       </div>

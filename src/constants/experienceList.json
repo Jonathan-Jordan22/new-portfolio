@@ -1,27 +1,35 @@
 [
   {
-    "company": "Skinstric AI",
-    "role": "Fullstack Engineer",
+    "company": "Gold Star Software",
+    "role": "Software Engineer Intern",
     "resps": [
-      "Delivered a real-time AI skin analysis app in React, integrating browser camera APIs and REST services to process images and live video with 95%+ accuracy.",
-      "Built a fully responsive UI with custom CSS3 animations, boosting mobile engagement by 30% and reducing bounce rate.",
-      " Optimized API communication with Axios, cutting upload-to-analysis time by 40% and enabling sub-second feedback.",
-      "Implemented robust routing and state management with React Router and Hooks, reducing navigation-related bugs by 25%.",
-      "Designed a modular component system, reducing code duplication by 40% and accelerating feature iteration cycles.",
-      "Deployed on Vercel to ensure 99.9% uptime and scalable access for 1,000+ test users across devices."
+      "Modernized a legacy Python toolkit of Btrieve and SQL protocol interceptor parsers for current Python and SWIG versions, migrating optparse to argparse and repairing broken struct packing.",
+      "Extended the Btrieve parser with error handling for missing network data and a request/reply tracker for PARC traffic.",
+      "Resolved SQL parser defects in error code handling and ConnectionID detection, and added duplicate query detection above a configurable threshold.",
+      "Updating a suite of 26 C++ Btrieve utilities to a standardized specification.",
+      "Implementing parameterized queries on the company's ASP website to prevent SQL injection."
     ],
-    "date": "July 2025 - Current"
+    "date": "Aug 2026 - Present"
+  },
+  {
+    "company": "Skinstric AI",
+    "role": "Frontend Engineer Intern",
+    "resps": [
+      "Built a real-time image analysis app in React that integrates live camera input with RESTful APIs for automated feature detection.",
+      "Optimized API communication with Axios to return analysis results in under a second.",
+      "Designed a modular component architecture to improve code reuse and simplify future feature work.",
+      "Deployed the app to production on Vercel and monitored its reliability for test users."
+    ],
+    "date": "Aug 2025 - Sep 2025"
   },
   {
     "company": "Frontend Simplified",
-    "role": "Fullstack Engineer",
+    "role": "Frontend Developer Intern",
     "resps": [
-      "Built a responsive React application from scratch; implemented dynamic routing supporting 100+ distinct item pages.",
-      "Engineered robust asynchronous data fetching from a REST API, decreasing API call errors by 20% through improved state/side-effect handling.",
-      "Integrated react-owl-carousel, 'load more' pagination, and AOS animations, increasing average session duration by 15%.",
-      "Created a reusable component library, cutting development time for new features by 35%.",
-      "Enforced modular design patterns, reducing developer on-boarding time by 50%."
+      "Built a multi-page NFT marketplace in React from requirements through deployment.",
+      "Implemented asynchronous data fetching and state handling for external API data and edge cases.",
+      "Designed reusable components that reduced duplicated code and made the app easier to maintain."
     ],
-    "date": "Jul 2020 - current"
+    "date": "Jul 2025 - Aug 2025"
   }
 ]

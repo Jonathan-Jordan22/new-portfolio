@@ -54,7 +54,6 @@ export default function Header() {
   };
 
   const handleMenuToggle = () => {
-    console.log("toggle");
     setMenuVisible((prev) => !prev);
   };
 
@@ -62,7 +61,6 @@ export default function Header() {
     <header ref={ref}>
       <NavMenu isVisible={menuVisible} toggleFunc={handleMenuToggle} />
       <BackgroundLines />
-      <NavMenu />
 
       <motion.div
         initial="hidden"
@@ -93,7 +91,7 @@ export default function Header() {
           </a>
           <span className="header--hash">{"//"}</span>
           <a
-            href="https://www.linkedin.com/in/jonathan-jordan-ab7719361"
+            href="https://www.linkedin.com/in/jonathan-jordan-dev"
             target={"_blank"}
             rel="noopener noreferrer"
           >
@@ -126,11 +124,11 @@ export default function Header() {
           </h3>
           <p className="theme--detail">
             <ScrambleText shuffle delay={4}>
-              Hey, I’m Jonathan! 🚀 I build full-stack applications that turn
-              ambiguous, real-world problems into clear, data-driven user
-              experiences. I enjoy designing APIs, modeling data, and pairing
-              them with clean, intuitive interfaces that make complex decisions
-              easier for users.
+              Hey, I’m Jonathan. I build backend systems in Python, FastAPI,
+              and PostgreSQL with security designed in from the start. I’m
+              currently a Software Engineer Intern at Gold Star Software,
+              working on database security tooling, and I graduate with a B.S.
+              in Secure Software Development in December 2026.
             </ScrambleText>
           </p>
         </div>
@@ -185,7 +183,7 @@ export default function Header() {
         <TextWriting
           controls={controls}
           delay={1.65}
-          text={"Fullstack"}
+          text={"Backend"}
           noblink
         />{" "}
         <motion.div

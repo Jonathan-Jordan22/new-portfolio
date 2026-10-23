@@ -34,7 +34,7 @@ export default function Projects() {
       img: work1,
       title: "Turning Relocation Decisions into Data-Driven Rankings",
       detail:
-        "Developed RelocateReady, a multi-user full-stack web application that helps users identify and rank global relocation destinations based on personalized preferences. Built a FastAPI backend with RESTful endpoints, relational data models, and weighted scoring algorithms, and a responsive Next.js frontend with Tailwind CSS. Implemented user authentication flows, saved-location tracking, and real-time ranking updates. Deployed the platform using Railway (backend) and Vercel (frontend), enabling production-ready scalability.",
+        "A multi-user full-stack app that ranks relocation destinations against each user's preferences. The backend is FastAPI with SQLAlchemy and PostgreSQL (Neon), deployed on Render, using RESTful endpoints and a weighted scoring algorithm. The frontend is Next.js, TypeScript, and Tailwind CSS on Vercel. I found an IDOR vulnerability in my own user handling and fixed it by replacing client-side user IDs with JWT authentication.",
       url: "https://relocate-ready.vercel.app/",
     },
     {
@@ -47,10 +47,10 @@ export default function Projects() {
       url: "https://skinstric-iota.vercel.app/",
     },
     {
-      client: "Ultraverse Internship",
+      client: "Frontend Simplified Internship",
       year: "2025",
       img: work3,
-      title: "Next generation NFT Marketplace.",
+      title: "Multi-Page NFT Marketplace",
       detail:
         "A modern NFT marketplace frontend built with React, featuring dynamic routing, API integration, responsive design, animated UI elements, and custom skeleton loaders. Users can browse, explore, and view detailed NFT collections and profiles in a seamless, engaging multi-page application experience.",
       url: "https://jonathan-internship-ruby.vercel.app/",
@@ -77,11 +77,11 @@ export default function Projects() {
         >
           <h3 className="theme--text">
             <ScrambleText shuffle delay={0.5}>
-              03
+              04
             </ScrambleText>{" "}
             <span className="hash">{"//"}</span>{" "}
             <ScrambleText shuffle delay={0.5}>
-              Expertise
+              Projects
             </ScrambleText>
           </h3>
         </motion.div>
@@ -116,9 +116,8 @@ export default function Projects() {
         >
           <p className="theme--detail theme--detail--adaptive">
             <ScrambleText delay={1}>
-              Discover a curated portfolio of projects where each line of code
-              tells a story of problem-solving, creativity, and technical
-              finesse.
+              Projects I built end to end, from data model and API design
+              through deployment.
             </ScrambleText>
           </p>
         </motion.div>

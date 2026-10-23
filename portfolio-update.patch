@@ -1,0 +1,393 @@
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..3bdd52e
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,3 @@
++node_modules/
++dist/
++.DS_Store
+diff --git a/README.md b/README.md
+index f768e33..4fae5c7 100644
+--- a/README.md
++++ b/README.md
+@@ -1,8 +1,14 @@
+-# React + Vite
++# Jonathan Jordan · Portfolio
+ 
+-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
++Personal portfolio for Jonathan Jordan, backend software engineer (Python, FastAPI, PostgreSQL) with a focus on secure software development.
+ 
+-Currently, two official plugins are available:
++Live: https://jonathan-jordan-portfolio.vercel.app/
+ 
+-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
++## Stack
++React 18, Vite, Framer Motion, Locomotive Scroll, EmailJS (contact form). Deployed on Vercel.
++
++## Run locally
++```
++npm install
++npm run dev
++```
+diff --git a/index.html b/index.html
+index b023e53..5197088 100644
+--- a/index.html
++++ b/index.html
+@@ -4,7 +4,12 @@
+     <meta charset="UTF-8" />
+     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+-    <title>Jonathan Jordan</title>
++    <title>Jonathan Jordan | Backend Software Engineer</title>
++    <meta name="description" content="Jonathan Jordan, backend software engineer (Python, FastAPI, PostgreSQL) with a focus on secure software development. B.S. Secure Software Development, December 2026." />
++    <meta property="og:title" content="Jonathan Jordan | Backend Software Engineer" />
++    <meta property="og:description" content="Python, FastAPI, and PostgreSQL backends with security designed in. Software Engineer Intern at Gold Star Software." />
++    <meta property="og:url" content="https://jonathan-jordan-portfolio.vercel.app/" />
++    <meta property="og:type" content="website" />
+   </head>
+   <body>
+     <div id="root"></div>
+diff --git a/package.json b/package.json
+index 3b041fd..732e721 100644
+--- a/package.json
++++ b/package.json
+@@ -1,5 +1,5 @@
+ {
+-  "name": "david-bragg",
++  "name": "jonathan-jordan-portfolio",
+   "private": true,
+   "version": "0.0.0",
+   "type": "module",
+diff --git a/src/components/About/index.jsx b/src/components/About/index.jsx
+index b11005a..c5dd06f 100644
+--- a/src/components/About/index.jsx
++++ b/src/components/About/index.jsx
+@@ -48,8 +48,8 @@ export default function About() {
+           <h2>
+             <ParaWriting
+               stagger={0.08}
+-              text={"I'm a highly motivated fullstack engineer with a strong "}
+-              sec={"passion for coding and problem-solving."}
++              text={"I build backend systems with "}
++              sec={"security designed in, not bolted on."}
+             />
+           </h2>
+         </div>
+@@ -82,17 +82,19 @@ export default function About() {
+         >
+           <p className="theme--detail--dark">
+             <ScrambleText delay={2}>
+-              I’m a full-stack developer experienced in building responsive,
+-              user-focused applications across the frontend and backend. I’ve
+-              contributed to projects such as an AI-powered skin analysis
+-              platform and a finance tracking dashboard, working with
+-              technologies including React, TypeScript, Python, FastAPI, and
+-              Firebase to deliver scalable, data-driven solutions. I enjoy
+-              solving complex problems, designing clean system architectures,
+-              and turning ideas into reliable, end-to-end software. I’m
+-              currently pursuing a Bachelor’s Degree in Secure Software
+-              Development and continue to expand my expertise in secure,
+-              production-ready application development.
++              I’m a backend-focused software engineer finishing a B.S. in
++              Secure Software Development at Red Rocks Community College
++              (December 2026). At Gold Star Software I work on database
++              security tooling for Actian Zen/PSQL: modernizing Python protocol
++              parsers, maintaining C++ Btrieve utilities, and adding
++              parameterized queries to harden a production website against SQL
++              injection. On my own, I built RelocateReady, a full-stack app with
++              a FastAPI and PostgreSQL backend, where I found and fixed an IDOR
++              vulnerability by moving to JWT authentication. Before software, I
++              spent four years in casino operations verifying payouts up to
++              $200K, so I’m used to work where accuracy is not optional. I’m
++              looking for remote backend engineering roles starting in early
++              2027.
+             </ScrambleText>
+           </p>
+         </motion.div>
+diff --git a/src/components/Footer/index.jsx b/src/components/Footer/index.jsx
+index e10867f..c32726c 100644
+--- a/src/components/Footer/index.jsx
++++ b/src/components/Footer/index.jsx
+@@ -134,8 +134,6 @@ export default function Footer() {
+     try {
+       const { serviceId, templateid, publicKey } = emailjsconfig;
+ 
+-      console.log("trigger");
+-
+       const templateParams = {
+         "user-name": fieldValues.name,
+         user_email: fieldValues.email,
+@@ -261,7 +259,7 @@ export default function Footer() {
+         className="footer--bottom"
+         onAnimationComplete={() => handleComplete()}
+       >
+-        <p>Copyright © {new Date().getFullYear()} Zen Farhat</p>
++        <p>Copyright © {new Date().getFullYear()} Jonathan Jordan</p>
+         <p>
+           <Time delay={3} />
+         </p>
+diff --git a/src/components/Header/index.jsx b/src/components/Header/index.jsx
+index 6bf60ad..fb2569b 100644
+--- a/src/components/Header/index.jsx
++++ b/src/components/Header/index.jsx
+@@ -54,7 +54,6 @@ export default function Header() {
+   };
+ 
+   const handleMenuToggle = () => {
+-    console.log("toggle");
+     setMenuVisible((prev) => !prev);
+   };
+ 
+@@ -62,7 +61,6 @@ export default function Header() {
+     <header ref={ref}>
+       <NavMenu isVisible={menuVisible} toggleFunc={handleMenuToggle} />
+       <BackgroundLines />
+-      <NavMenu />
+ 
+       <motion.div
+         initial="hidden"
+@@ -93,7 +91,7 @@ export default function Header() {
+           </a>
+           <span className="header--hash">{"//"}</span>
+           <a
+-            href="https://www.linkedin.com/in/jonathan-jordan-ab7719361"
++            href="https://www.linkedin.com/in/jonathan-jordan-dev"
+             target={"_blank"}
+             rel="noopener noreferrer"
+           >
+@@ -126,11 +124,11 @@ export default function Header() {
+           </h3>
+           <p className="theme--detail">
+             <ScrambleText shuffle delay={4}>
+-              Hey, I’m Jonathan! 🚀 I build full-stack applications that turn
+-              ambiguous, real-world problems into clear, data-driven user
+-              experiences. I enjoy designing APIs, modeling data, and pairing
+-              them with clean, intuitive interfaces that make complex decisions
+-              easier for users.
++              Hey, I’m Jonathan. I build backend systems in Python, FastAPI,
++              and PostgreSQL with security designed in from the start. I’m
++              currently a Software Engineer Intern at Gold Star Software,
++              working on database security tooling, and I graduate with a B.S.
++              in Secure Software Development in December 2026.
+             </ScrambleText>
+           </p>
+         </div>
+@@ -185,7 +183,7 @@ export default function Header() {
+         <TextWriting
+           controls={controls}
+           delay={1.65}
+-          text={"Fullstack"}
++          text={"Backend"}
+           noblink
+         />{" "}
+         <motion.div
+diff --git a/src/components/Projects/index.jsx b/src/components/Projects/index.jsx
+index 2de69a3..e2ddc9b 100644
+--- a/src/components/Projects/index.jsx
++++ b/src/components/Projects/index.jsx
+@@ -34,7 +34,7 @@ export default function Projects() {
+       img: work1,
+       title: "Turning Relocation Decisions into Data-Driven Rankings",
+       detail:
+-        "Developed RelocateReady, a multi-user full-stack web application that helps users identify and rank global relocation destinations based on personalized preferences. Built a FastAPI backend with RESTful endpoints, relational data models, and weighted scoring algorithms, and a responsive Next.js frontend with Tailwind CSS. Implemented user authentication flows, saved-location tracking, and real-time ranking updates. Deployed the platform using Railway (backend) and Vercel (frontend), enabling production-ready scalability.",
++        "A multi-user full-stack app that ranks relocation destinations against each user's preferences. The backend is FastAPI with SQLAlchemy and PostgreSQL (Neon), deployed on Render, using RESTful endpoints and a weighted scoring algorithm. The frontend is Next.js, TypeScript, and Tailwind CSS on Vercel. I found an IDOR vulnerability in my own user handling and fixed it by replacing client-side user IDs with JWT authentication.",
+       url: "https://relocate-ready.vercel.app/",
+     },
+     {
+@@ -47,10 +47,10 @@ export default function Projects() {
+       url: "https://skinstric-iota.vercel.app/",
+     },
+     {
+-      client: "Ultraverse Internship",
++      client: "Frontend Simplified Internship",
+       year: "2025",
+       img: work3,
+-      title: "Next generation NFT Marketplace.",
++      title: "Multi-Page NFT Marketplace",
+       detail:
+         "A modern NFT marketplace frontend built with React, featuring dynamic routing, API integration, responsive design, animated UI elements, and custom skeleton loaders. Users can browse, explore, and view detailed NFT collections and profiles in a seamless, engaging multi-page application experience.",
+       url: "https://jonathan-internship-ruby.vercel.app/",
+@@ -77,11 +77,11 @@ export default function Projects() {
+         >
+           <h3 className="theme--text">
+             <ScrambleText shuffle delay={0.5}>
+-              03
++              04
+             </ScrambleText>{" "}
+             <span className="hash">{"//"}</span>{" "}
+             <ScrambleText shuffle delay={0.5}>
+-              Expertise
++              Projects
+             </ScrambleText>
+           </h3>
+         </motion.div>
+@@ -116,9 +116,8 @@ export default function Projects() {
+         >
+           <p className="theme--detail theme--detail--adaptive">
+             <ScrambleText delay={1}>
+-              Discover a curated portfolio of projects where each line of code
+-              tells a story of problem-solving, creativity, and technical
+-              finesse.
++              Projects I built end to end, from data model and API design
++              through deployment.
+             </ScrambleText>
+           </p>
+         </motion.div>
+diff --git a/src/components/Resume/index.jsx b/src/components/Resume/index.jsx
+index 82fa104..bb18aa4 100644
+--- a/src/components/Resume/index.jsx
++++ b/src/components/Resume/index.jsx
+@@ -57,7 +57,7 @@ export default function Resume() {
+       <div className="resume--grid">
+         <div className="resume--grid--detail">
+           <div className="resume--grid--detail--pic">
+-            <img src={ProfilePic} alt="" />
++            <img src={ProfilePic} alt="Jonathan Jordan" />
+           </div>
+           <div className="resume--grid--detail--data">
+             <div className="resume--grid--detail--data--name">
+@@ -66,7 +66,7 @@ export default function Resume() {
+               </h2>
+               <h4>
+                 <ScrambleText shuffle delay={0}>
+-                  Fullstack Engineer
++                  Backend Software Engineer
+                 </ScrambleText>
+               </h4>
+               <motion.div
+@@ -85,7 +85,7 @@ export default function Resume() {
+                   <Icon img={githubIcon} />
+                 </a>
+                 <a
+-                  href="https://www.linkedin.com/in/jonathan-jordan-ab7719361"
++                  href="https://www.linkedin.com/in/jonathan-jordan-dev"
+                   target="_blank"
+                   rel="noreferrer"
+                 >
+@@ -122,7 +122,7 @@ export default function Resume() {
+             <div className="resume--grid--detail--data--skills">
+               <h4>
+                 <ScrambleText shuffle delay={0}>
+-                  Technical Skills
++                  Security &amp; Practices
+                 </ScrambleText>
+               </h4>
+ 
+@@ -140,9 +140,9 @@ export default function Resume() {
+           <div className="resume--grid--experience--head">
+             <p className="theme--detail">
+               <ScrambleText delay={0}>
+-                A highly motivated fullstack engineer prepared to utilise
+-                exceptional software, problem-solving and communication skills
+-                to further my programming passion as a website developer.
++                Backend software engineer with a security focus, graduating
++                December 2026 and seeking remote backend roles starting in
++                early 2027.
+               </ScrambleText>
+             </p>
+ 
+diff --git a/src/components/TechStack/index.jsx b/src/components/TechStack/index.jsx
+index 251697e..6d313de 100644
+--- a/src/components/TechStack/index.jsx
++++ b/src/components/TechStack/index.jsx
+@@ -54,7 +54,7 @@ export default function TechStack() {
+ 
+         <motion.div initial="hidden" animate={controls} variants={opacityVariant} transition={{ duration: 1, delay: 1 }} onAnimationComplete={() => handleComplete()} className="techStackSec--head--detail">
+           <p className="theme--detail">
+-            <ScrambleText delay={1}>Explore the technologies that shape my work: HTML5, CSS3, JavaScript, TypeScript, React, FastAPI, and PostgreSQL. I use each to craft full-stack applications that balance robust backend functionality with smooth, responsive user experiences.</ScrambleText>
++            <ScrambleText delay={1}>My core stack is Python, FastAPI, and PostgreSQL on the backend, with TypeScript and React on the frontend when a project needs a full interface. At work I also write C++ and SQL against Actian Zen/PSQL.</ScrambleText>
+           </p>
+         </motion.div>
+       </div>
+diff --git a/src/constants/experienceList.json b/src/constants/experienceList.json
+index ef59d4b..2216e48 100644
+--- a/src/constants/experienceList.json
++++ b/src/constants/experienceList.json
+@@ -1,27 +1,35 @@
+ [
++  {
++    "company": "Gold Star Software",
++    "role": "Software Engineer Intern",
++    "resps": [
++      "Modernized a legacy Python toolkit of Btrieve and SQL protocol interceptor parsers for current Python and SWIG versions, migrating optparse to argparse and repairing broken struct packing.",
++      "Extended the Btrieve parser with error handling for missing network data and a request/reply tracker for PARC traffic.",
++      "Resolved SQL parser defects in error code handling and ConnectionID detection, and added duplicate query detection above a configurable threshold.",
++      "Updating a suite of 26 C++ Btrieve utilities to a standardized specification.",
++      "Implementing parameterized queries on the company's ASP website to prevent SQL injection."
++    ],
++    "date": "Aug 2026 - Present"
++  },
+   {
+     "company": "Skinstric AI",
+-    "role": "Fullstack Engineer",
++    "role": "Frontend Engineer Intern",
+     "resps": [
+-      "Delivered a real-time AI skin analysis app in React, integrating browser camera APIs and REST services to process images and live video with 95%+ accuracy.",
+-      "Built a fully responsive UI with custom CSS3 animations, boosting mobile engagement by 30% and reducing bounce rate.",
+-      " Optimized API communication with Axios, cutting upload-to-analysis time by 40% and enabling sub-second feedback.",
+-      "Implemented robust routing and state management with React Router and Hooks, reducing navigation-related bugs by 25%.",
+-      "Designed a modular component system, reducing code duplication by 40% and accelerating feature iteration cycles.",
+-      "Deployed on Vercel to ensure 99.9% uptime and scalable access for 1,000+ test users across devices."
++      "Built a real-time image analysis app in React that integrates live camera input with RESTful APIs for automated feature detection.",
++      "Optimized API communication with Axios to return analysis results in under a second.",
++      "Designed a modular component architecture to improve code reuse and simplify future feature work.",
++      "Deployed the app to production on Vercel and monitored its reliability for test users."
+     ],
+-    "date": "July 2025 - Current"
++    "date": "Aug 2025 - Sep 2025"
+   },
+   {
+     "company": "Frontend Simplified",
+-    "role": "Fullstack Engineer",
++    "role": "Frontend Developer Intern",
+     "resps": [
+-      "Built a responsive React application from scratch; implemented dynamic routing supporting 100+ distinct item pages.",
+-      "Engineered robust asynchronous data fetching from a REST API, decreasing API call errors by 20% through improved state/side-effect handling.",
+-      "Integrated react-owl-carousel, 'load more' pagination, and AOS animations, increasing average session duration by 15%.",
+-      "Created a reusable component library, cutting development time for new features by 35%.",
+-      "Enforced modular design patterns, reducing developer on-boarding time by 50%."
++      "Built a multi-page NFT marketplace in React from requirements through deployment.",
++      "Implemented asynchronous data fetching and state handling for external API data and edge cases.",
++      "Designed reusable components that reduced duplicated code and made the app easier to maintain."
+     ],
+-    "date": "Jul 2020 - current"
++    "date": "Jul 2025 - Aug 2025"
+   }
+ ]
+diff --git a/src/constants/qualities.json b/src/constants/qualities.json
+index e406e9d..1703fa1 100644
+--- a/src/constants/qualities.json
++++ b/src/constants/qualities.json
+@@ -1,9 +1,9 @@
+ [
+-  "Confident leadership skills",
+-  "Exceptional communication skills",
+-  "Outstanding work ethic",
+-  "Professional client relations",
+-  "Quick learner",
+-  "Creative problem solver",
+-  "Extraordinary time management skills"
++  "Secure coding (OWASP Top 10)",
++  "SQL injection prevention",
++  "JWT authentication",
++  "REST API design",
++  "Relational data modeling",
++  "Linux",
++  "Git & GitHub"
+ ]
+diff --git a/src/constants/technicalSkills.json b/src/constants/technicalSkills.json
+index bb0c1fe..a3d76b4 100644
+--- a/src/constants/technicalSkills.json
++++ b/src/constants/technicalSkills.json
+@@ -1 +1 @@
+-["Python", "FastAPI","JavaScript", "TypeScript", "PostgreSQL"]
++["Python", "FastAPI", "PostgreSQL", "SQL", "SQLAlchemy", "C++"]
+diff --git a/src/constants/technicalSkills2.json b/src/constants/technicalSkills2.json
+index 5272403..49970ea 100644
+--- a/src/constants/technicalSkills2.json
++++ b/src/constants/technicalSkills2.json
+@@ -1 +1 @@
+-["React", "TailwindCSS", "VsCode", "Vercel", "GitHub"]
++["TypeScript", "JavaScript", "Next.js", "React", "Tailwind CSS", "Vercel / Render"]

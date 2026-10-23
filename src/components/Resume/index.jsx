@@ -57,7 +57,7 @@ export default function Resume() {
       <div className="resume--grid">
         <div className="resume--grid--detail">
           <div className="resume--grid--detail--pic">
-            <img src={ProfilePic} alt="" />
+            <img src={ProfilePic} alt="Jonathan Jordan" />
           </div>
           <div className="resume--grid--detail--data">
             <div className="resume--grid--detail--data--name">
@@ -66,7 +66,7 @@ export default function Resume() {
               </h2>
               <h4>
                 <ScrambleText shuffle delay={0}>
-                  Fullstack Engineer
+                  Backend Software Engineer
                 </ScrambleText>
               </h4>
               <motion.div
@@ -85,7 +85,7 @@ export default function Resume() {
                   <Icon img={githubIcon} />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/jonathan-jordan-ab7719361"
+                  href="https://www.linkedin.com/in/jonathan-jordan-dev"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -122,7 +122,7 @@ export default function Resume() {
             <div className="resume--grid--detail--data--skills">
               <h4>
                 <ScrambleText shuffle delay={0}>
-                  Technical Skills
+                  Security &amp; Practices
                 </ScrambleText>
               </h4>
 
@@ -140,9 +140,9 @@ export default function Resume() {
           <div className="resume--grid--experience--head">
             <p className="theme--detail">
               <ScrambleText delay={0}>
-                A highly motivated fullstack engineer prepared to utilise
-                exceptional software, problem-solving and communication skills
-                to further my programming passion as a website developer.
+                Backend software engineer with a security focus, graduating
+                December 2026 and seeking remote backend roles starting in
+                early 2027.
               </ScrambleText>
             </p>
 

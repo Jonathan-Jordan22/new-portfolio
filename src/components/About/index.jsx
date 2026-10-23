@@ -48,8 +48,8 @@ export default function About() {
           <h2>
             <ParaWriting
               stagger={0.08}
-              text={"I'm a highly motivated fullstack engineer with a strong "}
-              sec={"passion for coding and problem-solving."}
+              text={"I build backend systems with "}
+              sec={"security designed in, not bolted on."}
             />
           </h2>
         </div>
@@ -82,17 +82,19 @@ export default function About() {
         >
           <p className="theme--detail--dark">
             <ScrambleText delay={2}>
-              I’m a full-stack developer experienced in building responsive,
-              user-focused applications across the frontend and backend. I’ve
-              contributed to projects such as an AI-powered skin analysis
-              platform and a finance tracking dashboard, working with
-              technologies including React, TypeScript, Python, FastAPI, and
-              Firebase to deliver scalable, data-driven solutions. I enjoy
-              solving complex problems, designing clean system architectures,
-              and turning ideas into reliable, end-to-end software. I’m
-              currently pursuing a Bachelor’s Degree in Secure Software
-              Development and continue to expand my expertise in secure,
-              production-ready application development.
+              I’m a backend-focused software engineer finishing a B.S. in
+              Secure Software Development at Red Rocks Community College
+              (December 2026). At Gold Star Software I work on database
+              security tooling for Actian Zen/PSQL: modernizing Python protocol
+              parsers, maintaining C++ Btrieve utilities, and adding
+              parameterized queries to harden a production website against SQL
+              injection. On my own, I built RelocateReady, a full-stack app with
+              a FastAPI and PostgreSQL backend, where I found and fixed an IDOR
+              vulnerability by moving to JWT authentication. Before software, I
+              spent four years in casino operations verifying payouts up to
+              $200K, so I’m used to work where accuracy is not optional. I’m
+              looking for remote backend engineering roles starting in early
+              2027.
             </ScrambleText>
           </p>
         </motion.div>

@@ -1,8 +1,14 @@
-# React + Vite
+# Jonathan Jordan · Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio for Jonathan Jordan, backend software engineer (Python, FastAPI, PostgreSQL) with a focus on secure software development.
 
-Currently, two official plugins are available:
+Live: https://jonathan-jordan-portfolio.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stack
+React 18, Vite, Framer Motion, Locomotive Scroll, EmailJS (contact form). Deployed on Vercel.
+
+## Run locally
+```
+npm install
+npm run dev
+```
